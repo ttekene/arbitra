@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Три варіанти дизайну — сайт арбітражного керуючого</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23111'/><text x='50' y='69' font-size='54' font-family='Segoe UI,Arial,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'>3</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&family=Manrope:wght@800&family=Onest:wght@800&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  body{
+    margin:0;background:#f4f4f5;color:#18181b;
+    font:400 16px/1.6 "Inter",-apple-system,"Segoe UI",Roboto,sans-serif;
+    padding:64px 24px 80px;
+  }
+  .wrap{max-width:1140px;margin:0 auto}
+  header{max-width:640px;margin-bottom:52px}
+  h1{margin:0 0 14px;font-size:38px;line-height:1.15;letter-spacing:-.03em;font-weight:700}
+  header p{margin:0;color:#5f5f6a}
+  .note{
+    margin-top:22px;padding:14px 18px;border-radius:10px;background:#fff;border:1px solid #e4e4e7;
+    font-size:14px;color:#52525b;
+  }
+  .note code{background:#f4f4f5;padding:2px 6px;border-radius:5px;font-size:13px}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{
+    background:#fff;border:1px solid #e4e4e7;border-radius:16px;overflow:hidden;
+    display:flex;flex-direction:column;transition:.25s ease;text-decoration:none;color:inherit;
+  }
+  .card:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(0,0,0,.10);border-color:#d4d4d8}
+
+  .prev{height:200px;padding:26px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+  .prev small{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;opacity:.75}
+  .prev b{font-size:26px;line-height:1.1;font-weight:600;letter-spacing:-.02em}
+  .prev i{display:block;width:44px;height:3px;border-radius:2px;font-style:normal}
+
+  /* 1 — класика */
+  .p1{background:#10243d;color:#fff}
+  .p1 b{font-family:"Playfair Display",Georgia,serif}
+  .p1 b em{color:#c2a05a}
+  .p1 small{color:#c2a05a}
+  .p1 i{background:#c2a05a}
+  /* 2 — модерн */
+  .p2{background:#f2f6f4;color:#0d1b18}
+  .p2 b{font-family:"Manrope",sans-serif;font-weight:800}
+  .p2 b em{color:#0f7a63;font-style:normal}
+  .p2 small{color:#0f7a63}
+  .p2 i{background:#0f7a63}
+  /* 3 — темний */
+  .p3{background:#0b0c0e;color:#ece9e4}
+  .p3 b{font-family:"Onest",sans-serif;font-weight:800;letter-spacing:-.04em}
+  .p3 b em{color:#d9a441;font-style:normal}
+  .p3 small{color:#d9a441}
+  .p3 i{background:#d9a441}
+
+  .body{padding:24px 26px 26px;border-top:1px solid #e4e4e7;flex:1;display:flex;flex-direction:column}
+  .body h2{margin:0 0 8px;font-size:19px;font-weight:700;letter-spacing:-.02em}
+  .body p{margin:0 0 18px;font-size:14.5px;color:#5f5f6a;flex:1}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+  .tags span{font-size:12px;padding:5px 10px;border-radius:100px;background:#f4f4f5;color:#52525b}
+  .go{display:inline-flex;align-items:center;gap:7px;font-size:14.5px;font-weight:600;color:#18181b}
+  .sw{display:flex;gap:5px;margin-bottom:16px}
+  .sw i{width:20px;height:20px;border-radius:6px;border:1px solid rgba(0,0,0,.08)}
+
+  footer{margin-top:56px;font-size:13.5px;color:#71717a;line-height:1.7}
+  @media (max-width:900px){.grid{grid-template-columns:1fr}body{padding:40px 20px 60px}h1{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Три варіанти дизайну сайту</h1>
+    <p>Той самий зміст і структура — різна подача. Відкрийте кожен, погортайте до низу, і скажіть, який залишаємо. Решту приберемо.</p>
+    <div class="note">
+      Імена, телефони, email, номер свідоцтва та цифри — <b>заглушки</b>. Що саме замінити, описано в <code>README.md</code>.
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <a class="card" href="design-1-classic/">
+      <div class="prev p1">
+        <small>Варіант 1</small>
+        <b>Супровід процедур <em>банкрутства</em></b>
+        <i></i>
+      </div>
+      <div class="body">
+        <h2>Класика</h2>
+        <p>Темно-синій із золотом, антиква, суворі рамки. Найбільш «адвокатський» вигляд: солідність і досвід. Безпечний вибір для старшої аудиторії та корпоративних клієнтів.</p>
+        <div class="sw"><i style="background:#10243d"></i><i style="background:#c2a05a"></i><i style="background:#f7f4ee"></i><i style="background:#fff"></i></div>
+        <div class="tags"><span>Playfair Display</span><span>Консервативний</span><span>Висока довіра</span></div>
+        <span class="go">Відкрити →</span>
+      </div>
+    </a>
+
+    <a class="card" href="design-2-modern/">
+      <div class="prev p2">
+        <small>Варіант 2</small>
+        <b>Борги можна закрити <em>законно</em></b>
+        <i></i>
+      </div>
+      <div class="body">
+        <h2>Модерн</h2>
+        <p>Світлий, повітряний, смарагдовий акцент і круглі форми. Найзрозуміліший для звичайної людини з боргами: таби «фізособам / бізнесу / кредиторам», лічильники, м’які картки.</p>
+        <div class="sw"><i style="background:#0f7a63"></i><i style="background:#e2f2ed"></i><i style="background:#f2f6f4"></i><i style="background:#0d1b18"></i></div>
+        <div class="tags"><span>Manrope</span><span>Дружній</span><span>Найкраще конвертує</span></div>
+        <span class="go">Відкрити →</span>
+      </div>
+    </a>
+
+    <a class="card" href="design-3-dark/">
+      <div class="prev p3">
+        <small>Варіант 3</small>
+        <b>Банкрутство — це не кінець<em>.</em></b>
+        <i></i>
+      </div>
+      <div class="body">
+        <h2>Темний преміум</h2>
+        <p>Майже чорний фон, бронзовий акцент, велика типографіка та бігучий рядок. Виглядає дорого й помітно вирізняється серед юридичних сайтів. Для преміальних клієнтів і бізнесу.</p>
+        <div class="sw"><i style="background:#0b0c0e"></i><i style="background:#d9a441"></i><i style="background:#16191d"></i><i style="background:#ece9e4"></i></div>
+        <div class="tags"><span>Onest</span><span>Сміливий</span><span>Запам’ятовується</span></div>
+        <span class="go">Відкрити →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <footer>
+    Локальний запуск: <code>python -m http.server 8080</code> у теці проєкту — або <code>powershell -ExecutionPolicy Bypass -File serve.ps1</code>, якщо Python не під рукою.<br>
+    Усі три варіанти — звичайні HTML + CSS + JS без залежностей і без бекенду. Форма відкриває поштовий застосунок.
+  </footer>
+</div>
+</body>
+</html>
