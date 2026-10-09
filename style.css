@@ -126,17 +126,33 @@ svg{display:block}
 /* ═══ ПЕРЕВАГИ ═══ */
 .grid{display:grid;gap:22px}
 .grid--3{grid-template-columns:repeat(3,1fr)}
+.benefits{align-items:start}
 .scard{
-  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 26px;
-  transition:.28s cubic-bezier(.4,0,.2,1);
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  transition:border-color .2s,box-shadow .2s;
 }
-.scard:hover{transform:translateY(-5px);box-shadow:var(--sh-lg);border-color:transparent}
+.scard:hover,.scard[open]{border-color:var(--acc);box-shadow:var(--sh-lg)}
+.scard summary{list-style:none;cursor:pointer;position:relative;padding:26px 26px}
+.scard summary::-webkit-details-marker{display:none}
+.scard summary:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:var(--r-lg)}
 .ic{
   display:grid;place-items:center;width:52px;height:52px;flex:0 0 52px;border-radius:16px;
   background:var(--acc-soft);color:var(--acc);margin-bottom:18px;
 }
 .ic svg{width:26px;height:26px}
-.scard h3{font-size:21px;line-height:1.3;text-wrap:balance}
+.scard h3{font-size:21px;line-height:1.3;text-wrap:balance;padding-right:30px}
+.scard__x{position:absolute;right:24px;top:26px;width:28px;height:28px;border-radius:50%;background:var(--soft)}
+.scard__x::before,.scard__x::after{
+  content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;border-radius:2px;
+  background:var(--acc);transform:translate(-50%,-50%);
+}
+.scard__x::after{transform:translate(-50%,-50%) rotate(90deg)}
+.scard[open] .scard__x::after{display:none}
+.scard__b{padding:0 26px 26px}
+.scard__b p{color:var(--muted);font-size:15.5px;line-height:1.6}
+.scard__go{display:inline-block;margin-top:14px;color:var(--acc);font-weight:700;font-size:15px}
+.scard__go:hover{color:var(--acc-2)}
+.shead__sub{margin-top:10px;color:var(--muted);font-size:15.5px}
 
 /* ═══ ВАРТІСТЬ ═══ */
 .price{
@@ -237,10 +253,12 @@ svg{display:block}
   .pill{font-size:12.5px;padding:8px 15px;margin-bottom:22px}
   .hero__cta{flex-direction:column;align-items:stretch;max-width:400px;margin:26px auto 0}
 
-  .scard{display:flex;align-items:center;gap:16px;padding:22px 20px}
+  .scard summary{display:flex;align-items:center;gap:16px;padding:20px 20px}
   .scard .ic{width:46px;height:46px;flex-basis:46px;border-radius:14px;margin:0}
   .scard .ic svg{width:23px;height:23px}
-  .scard h3{font-size:17.5px}
+  .scard h3{font-size:17px;padding-right:0;flex:1}
+  .scard__x{position:relative;right:auto;top:auto;flex:0 0 28px}
+  .scard__b{padding:0 20px 20px 82px}
 
   .price{padding:30px 22px;border-radius:22px}
   .price__list li{font-size:16px}

@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
 
@@ -61,21 +61,43 @@
     <div class="shead shead--center">
       <p class="eyebrow">Переваги</p>
       <h2>Переваги процедури банкрутства</h2>
+      <p class="shead__sub">Натисніть на картку, щоб дізнатися більше</p>
     </div>
 
-    <div class="grid grid--3">
-      <article class="scard">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7h14M7.5 7l-3 6h6zM16.5 7l-3 6h6z"/></svg></span>
-        <h3>Реструктуризація боргів, визнаних судом</h3>
-      </article>
-      <article class="scard">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 8.5l7 7"/></svg></span>
-        <h3>Припинення нарахування процентів, штрафів та пені</h3>
-      </article>
-      <article class="scard">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>
-        <h3>Строк реструктуризації — 5 років</h3>
-      </article>
+    <div class="grid grid--3 benefits">
+      <details class="scard">
+        <summary>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7h14M7.5 7l-3 6h6zM16.5 7l-3 6h6z"/></svg></span>
+          <h3>Реструктуризація боргів, визнаних судом</h3>
+          <span class="scard__x" aria-hidden="true"></span>
+        </summary>
+        <div class="scard__b">
+          <p>Замість тиску з усіх боків — один зрозумілий план погашення, затверджений судом. Ви платите посильні суми за графіком, а не все й одразу.</p>
+          <a class="scard__go" href="#contact">Дізнатися, чи підходить мені →</a>
+        </div>
+      </details>
+      <details class="scard">
+        <summary>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 8.5l7 7"/></svg></span>
+          <h3>Припинення нарахування процентів, штрафів та пені</h3>
+          <span class="scard__x" aria-hidden="true"></span>
+        </summary>
+        <div class="scard__b">
+          <p>Борг перестає рости. Сума фіксується — і ви нарешті бачите кінцеву цифру, а не нескінченні нарахування.</p>
+          <a class="scard__go" href="#contact">Дізнатися, чи підходить мені →</a>
+        </div>
+      </details>
+      <details class="scard">
+        <summary>
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span>
+          <h3>Строк реструктуризації — 5 років</h3>
+          <span class="scard__x" aria-hidden="true"></span>
+        </summary>
+        <div class="scard__b">
+          <p>До пʼяти років на розрахунок із кредиторами. Достатньо часу, щоб платити по силах і зберегти звичний ритм життя.</p>
+          <a class="scard__go" href="#contact">Дізнатися, чи підходить мені →</a>
+        </div>
+      </details>
     </div>
   </div>
 </section>
