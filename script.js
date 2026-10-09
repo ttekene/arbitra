@@ -33,24 +33,7 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  if (!('IntersectionObserver' in window)) {
-    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
-    return;
-  }
-
-  /* ── Поява блоків ── */
-  var items = document.querySelectorAll('.reveal');
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-in');
-      io.unobserve(entry.target);
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -60px' });
-  items.forEach(function (el, i) {
-    el.style.transitionDelay = (i % 3) * 70 + 'ms';
-    io.observe(el);
-  });
+  if (!('IntersectionObserver' in window)) return;
 
   /* ── Активний пункт меню ── */
   var links = Array.prototype.slice.call(document.querySelectorAll('.menu a[href^="#"]'));

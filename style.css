@@ -185,11 +185,7 @@ svg{display:block}
 .fab.is-hidden{opacity:0;transform:scale(.8);pointer-events:none}
 .fab svg{width:24px;height:24px}
 
-/* ═══ ПОЯВА ═══ */
-.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-.reveal.is-in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
-  .js .reveal{opacity:1;transform:none;transition:none}
   html{scroll-behavior:auto}
 }
 
