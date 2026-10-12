@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /design-1-classic/
+Disallow: /design-2-modern/
+Disallow: /design-3-dark/
+Disallow: /variants/
+
+Sitemap: https://bancruptcyinsolvency.com/sitemap.xml
