@@ -170,7 +170,7 @@ svg{display:block}
 /* ═══ ПРО МЕНЕ ═══ */
 .about{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:56px;align-items:center;max-width:980px}
 .about__photo{
-  width:100%;aspect-ratio:413/531;object-fit:cover;border-radius:var(--r-lg);
+  width:100%;height:auto;aspect-ratio:413/531;object-fit:cover;border-radius:var(--r-lg);
   box-shadow:var(--sh-lg);background:#fff;
 }
 .about__txt h2{font-size:clamp(30px,4vw,46px);margin-bottom:10px}
